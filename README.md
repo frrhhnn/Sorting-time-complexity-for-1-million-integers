@@ -1,7 +1,9 @@
 # Sorting-time-complexity-for-1-million-integers
 
 Nama : Farhanul Khair
+
 NPM  : 2208107010076
+
 Mata Kuliah : Struktur Data dan Algoritma
 
 Pada tugas kali ini saya telah menyiapkan sebuah program dengan bahasa pemrograman C untuk melakukan pengurutan bilangan secara acak menggunakan tiga algortima yang berbeda yaitu, buble sort, selection sort, dan insertion sort. Kode program ini akan menampilkan nama sorting, jumlah bilangan yang di sorting dan waktu yang diperlukan untuk mensorting bilangan tersebut. Program ini akan mencetak setiap 100 ribu bilangan pada setiap iterasi. Kode program ini disimpan di dalam sebuah file dengan ekstensi .c, dan mengompilasinya menggunakan compiler C seperti GCC. Setelah berhasil dikompilasi, kode program tersebut di jalankan di terminal dengan perintah .\2208107010076_Simple_Sorting.
