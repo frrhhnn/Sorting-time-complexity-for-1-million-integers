@@ -63,8 +63,8 @@ void insertionSort(int array[], int size){
     }
 }
 
-void saveToFile(int array[], int size) {
-    FILE* file = fopen("unsorted.txt", "w");
+void saveToFile(int array[], int size, char *filename) {
+    FILE* file = fopen(filename, "w");
     if (file == NULL) {
         printf("Error opening file.\n");
         return;
@@ -80,7 +80,7 @@ void saveToFile(int array[], int size) {
 int main(){
     int *numbers = malloc(MAX_NUMBERS * sizeof(int));
     generateRandomNumbers(numbers, MAX_NUMBERS);
-    saveToFile(numbers, MAX_NUMBERS);
+    saveToFile(numbers, MAX_NUMBERS, "unsorted.txt");
 
     clock_t start, end;
     double cpu_time_used;
@@ -111,7 +111,14 @@ int main(){
         end = clock();
         cpu_time_used = ((double) (end - start)) / CLOCKS_PER_SEC;
         printf("Insertion Sort  |      %d      |     %f ms\n", n, cpu_time_used*1000);
+
+        if (n == MAX_NUMBERS)
+        {
+            memcpy(numbers, arr, MAX_NUMBERS * sizeof(int));
+        }
     }
+
+    saveToFile(numbers, MAX_NUMBERS, "sorted.txt");
 
     return 0;
 }
